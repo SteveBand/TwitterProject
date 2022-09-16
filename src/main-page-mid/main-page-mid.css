@@ -1,0 +1,10 @@
+.main {
+    position: relative;
+    top: 0;
+    left: 30%;
+    width: 35vw;
+    height: 99.5%;
+    border: 1px solid gray;
+    border-top: none;
+    border-bottom: none;
+}
