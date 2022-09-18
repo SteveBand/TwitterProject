@@ -69,7 +69,7 @@
 
 .tweet-btn:hover {
     transition: 500ms ease-out;
-    background-color: rgb(26, 140, 216);
+    background-color: rgb(26, 140, 216, 0.8);
 }
 
 @media only screen and (max-width:1300px){

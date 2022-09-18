@@ -1,8 +1,8 @@
 import ReactDOM from 'react-dom';
 import React from 'react'
 import App from './App';
-import { Context } from './context';
-import './index.css';
+import { Context } from './contexts/context';
+import '../src/assets/index.css';
 
 const Index = () => {
   return (

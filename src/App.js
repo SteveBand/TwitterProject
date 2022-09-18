@@ -1,6 +1,6 @@
 import React from "react";
 import { HomePage } from "./flow/homepage";
-import "./App.css";
+import "../src/assets/App.css";
 
 function App() {
   return (

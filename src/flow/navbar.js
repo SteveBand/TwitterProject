@@ -1,5 +1,5 @@
 import React from 'react';
-import './main-page-nav.css';
+import '../assets/navbar.css';
 import { FaTwitter } from 'react-icons/fa';
 import { BiHomeCircle, BiHash, BiBell, BiBookmark, BiListUl, BiPen } from 'react-icons/bi';
 import { AiOutlineMail } from 'react-icons/ai';

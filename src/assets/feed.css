@@ -75,6 +75,7 @@
 
 .input{
    height: 50px;
+   max-height: 200px;
 }
 
 
@@ -83,7 +84,7 @@
 textarea {
     background-color: transparent;
     min-width: 100px;
-    max-height: 150px;
+    max-height: 190px;
     width: 500px;
     font-size: 20px;
     margin-left: 60px;
@@ -95,4 +96,81 @@ textarea {
 
 .input textarea::-webkit-scrollbar{
     width: 0px;
+}
+
+.input-can-reply {
+    display: flex;
+    width: inherit;
+    color:rgb(29, 155, 240, 0.9);
+    font-size: 14px;
+    margin: 0 0 10px 60px;
+    padding: 3px 14px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.input-can-reply p {
+    margin-left: 5px;
+    font-weight: 600;
+}
+
+.earth-icon {
+    font-size: 16px;
+    
+}
+
+.input-can-reply:hover {
+    transition: all 400ms ease;
+    background-color: rgb(29, 155, 240,0.2);
+}
+
+.input-upload{
+    height: 50px;
+    border-top: 1px solid gray;
+    width: 500px;
+    margin-left: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.input-upload ul{
+    display: flex;
+    list-style: none;
+    color: rgb(29, 155, 240);
+    align-items: center;
+    height: inherit;
+}
+
+.input-upload li {
+    padding: 4px 8px;
+    border-radius: 30px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.input-upload li:hover {
+    transition: all 400ms ease;
+    background-color: rgb(29, 155, 240, 0.3);
+}
+
+.tweet-btn-feed-container{
+    justify-self: right;
+    margin-left: 200px;
+}
+
+.tweet-btn-feed {
+    border-radius: 5rem;
+    font-size: 16px;
+    padding: 10px 25px;
+    border:none;
+    outline: none;
+    background-color: rgb(29, 155, 240, 0.9);
+    color: white;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.tweet-btn-feed:hover {
+    transition: all 500ms ease-in-out;
+    background-color: rgb(26, 140, 216, 0.8);
 }
