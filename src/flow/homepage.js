@@ -1,13 +1,13 @@
 import React from 'react'
-import { MainPageNav } from './main-page-nav/main-page-nav'
-import { MidPage } from './main-page-mid/main-page-mid'
+import { MainPageNav } from './navbar'
+import { FeedPage } from './feed'
 export const HomePage = () => {
 
     return (
         <React.StrictMode>
             <div className='main-page'>
                <MainPageNav />
-               <MidPage />
+               <FeedPage />
             </div>
         </React.StrictMode>
     )

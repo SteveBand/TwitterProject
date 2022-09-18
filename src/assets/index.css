@@ -12,5 +12,5 @@ body {
 }
 
 .main-page {
-  display: inline-flex;
+  display: flex;
 }

@@ -12,12 +12,11 @@ export const MainPageNav = () => {
         <React.StrictMode>
                 <section className='nav'>
                     <article className='nav-content'>
-                        <div className='nav-items-logo'>
-                            <div className='twitter-icon'>
+                        <div className='nav-items'>
+                            <div className='twitter-icon icon'>
                                 <FaTwitter />
                             </div>
                             <div className='text'>
-
                             </div>
                         </div>
                         <div className='nav-items'>
