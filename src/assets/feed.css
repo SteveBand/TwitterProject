@@ -27,7 +27,7 @@
 
 .top-tweets:hover {
     transition: 300ms ease-in-out;
-    background-color: rgb(151, 149, 149, 0.1)
+    background-color: var(--nav-hover-color);
 }
 
 .title {
@@ -60,10 +60,10 @@
     height: max-content;
     padding: 2px 15px 2px 25px;
     margin: 5px 0 0 0;
-    border: 1px solid rgba(29, 155, 240, 0.3);
+    border: 1px solid var(--btn-li-hover-color);
     border-radius: 100px;
     display: flex;
-    color: rgb(29, 155, 240);
+    color: var(--btn-color);
     align-items: center;
     cursor: pointer;
     margin-right: 150px;
@@ -101,7 +101,7 @@ textarea {
 .input-can-reply {
     display: flex;
     width: inherit;
-    color:rgb(29, 155, 240, 0.9);
+    color:var(--btn-color);
     font-size: 14px;
     margin: 0 0 10px 60px;
     padding: 3px 14px;
@@ -120,8 +120,8 @@ textarea {
 }
 
 .input-can-reply:hover {
-    transition: all 400ms ease;
-    background-color: rgb(29, 155, 240,0.2);
+    transition: var(--transition);
+    background-color: var(--btn-li-hover-color);
 }
 
 .input-upload{
@@ -131,12 +131,13 @@ textarea {
     margin-left: 60px;
     display: flex;
     align-items: center;
+    margin-bottom: 5px;
 }
 
 .input-upload ul{
     display: flex;
     list-style: none;
-    color: rgb(29, 155, 240);
+    color: var(--btn-color);
     align-items: center;
     height: inherit;
 }
@@ -149,8 +150,8 @@ textarea {
 }
 
 .input-upload li:hover {
-    transition: all 400ms ease;
-    background-color: rgb(29, 155, 240, 0.3);
+    transition: var(--transition);
+    background-color: var(--btn-li-hover-color);
 }
 
 .tweet-btn-feed-container{
@@ -164,13 +165,85 @@ textarea {
     padding: 10px 25px;
     border:none;
     outline: none;
-    background-color: rgb(29, 155, 240, 0.9);
+    background-color: var(--btn-color);
     color: white;
-    margin-top: 1rem;
     cursor: pointer;
 }
 
 .tweet-btn-feed:hover {
     transition: all 500ms ease-in-out;
-    background-color: rgb(26, 140, 216, 0.8);
+    background-color: var(--btn-hover-color);
+}
+
+.tweet-content {
+    width: 100%;
+    max-height: 600px;
+    border: 1px solid var(--post-border-color);
+    border-right: none;
+    border-left: none;
+}
+
+.tweet-content:hover {
+  background-color: var(--nav-hover-color);
+}
+
+.post-content {
+    width: 85%;
+    height: auto;
+    padding-top: 10px;
+    flex-wrap: wrap;
+}
+
+.tweet-profile-logo {
+    font-size: 45px;
+    margin-right: 5px;
+}
+
+.tweet-details {
+    padding-left: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5px;
+}
+
+.tweet-username {
+    color: whitesmoke;
+    width: 100%;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.tweet-more {
+    font-size: 23px;
+    color: gray;
+    padding: 3px 3px;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.tweet-more:hover {
+    transition: all;
+    border-radius: 30px;
+    background-color: var(--btn-li-hover-color);
+}
+
+.post-social {
+  width: 100%;
+  padding: 10px 80px 5px 80px;
+}
+
+.post-social ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    color: gray;
+}
+
+.post-social li {
+    padding: 2px 4px;
+    font-size: 16px;
+    color: gray;
+    border-radius: 30px;
 }

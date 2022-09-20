@@ -1,17 +1,31 @@
-import React, {useState, useEffect, useRef} from 'react';
+import React, {useState, useEffect, useRef, useMemo} from 'react';
 import '../assets/feed.css'
-import { MdAccountCircle, MdOutlinePlace } from 'react-icons/md'
+import { MdAccountCircle, MdOutlinePlace, MdMoreHoriz, MdOutlineQuickreply } from 'react-icons/md'
 import { WiSunrise } from 'react-icons/wi'
 import {FiChevronDown} from 'react-icons/fi'
 import { GiEarthAmerica } from 'react-icons/gi';
-import { BsCardImage, BsEmojiSmile} from 'react-icons/bs';
-import { AiOutlineFileGif, AiOutlineSchedule } from 'react-icons/ai'
-import {BiPoll} from 'react-icons/bi'
+import { BsCardImage, BsEmojiSmile, BsHeart, BsUpload} from 'react-icons/bs';
+import { AiOutlineFileGif, AiOutlineSchedule, AiOutlineRetweet } from 'react-icons/ai'
+import {BiLike, BiPoll} from 'react-icons/bi'
 
 export const FeedPage = () => {
     const textArea = useRef();
     const inputExpand = useRef();
-    const [textAreaInput, setTextAreaInput]= useState('')
+    const [textAreaInput, setTextAreaInput] = useState('')
+    const [posts, setPosts] = useState([]);
+
+    let postfeed = posts
+
+    const handleSumbit = () => {
+        return setPosts([{
+                like: 0,
+                retweet: 0,
+                comment: 0,
+                content: textAreaInput,
+                username: 'username',
+
+            }, ...posts])
+    }
     
     const handleTextArea = () => {
         textArea.current.style.height = `50px`
@@ -22,8 +36,11 @@ export const FeedPage = () => {
     }
 
     useEffect(() => {
-       console.log(textAreaInput)
-    },[textAreaInput])
+    }, [textAreaInput])
+    
+   useEffect(() => {
+       console.log(posts)
+    }, [posts])
 
     return (
         <React.StrictMode>
@@ -81,10 +98,37 @@ export const FeedPage = () => {
                                 </ul>
                             </div>
                             <div className='tweet-btn-feed-container'>
-                                <button className='tweet-btn-feed'>tweet</button>
-                                </div>
-                            
+                                <button className='tweet-btn-feed' onClick={handleSumbit}>tweet</button>
+                            </div>                           
                         </div>
+                    </div>
+                    <div className='tweets-posts'>
+                        {posts ? 
+                            postfeed.map((post) => {
+                                const { like, retweet, comment, content, username, logo } = post;
+                                return (
+                                    <div className='tweet-content'>
+                                        <div className='tweet-details'>
+                                            <div className='tweet-profile-logo'><MdAccountCircle /></div>
+                                            <div className='post-content'>
+                                                <div className='tweet-username'><p>{username}</p></div>
+                                                <div className='content-input'>{content}</div>
+                                            </div>
+                                            <div className='tweet-more'><MdMoreHoriz/></div>
+                                            
+                                        </div>
+                                        <div className='post-social'>
+                                            <ul>
+                                                <li><MdOutlineQuickreply /></li>
+                                                <li><AiOutlineRetweet /></li>
+                                                <li><BsHeart /></li>
+                                                <li><BsUpload/></li>
+                                            </ul>
+                                        </div>                                                                               
+                                    </div>
+                                );
+                            })
+                            : <div></div>}
                     </div>
                  </section>
             </div>

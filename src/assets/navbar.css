@@ -43,8 +43,8 @@
 
 
 .nav-items:hover{
-    transition: all;
-    background-color: rgb(151, 149, 149, 0.2);
+    transition: var(--transition);
+    background-color: var(--nav-hover-color);
 }
 
 .icon {
@@ -62,14 +62,14 @@
     border-radius: 5rem;
     font-size: 125%;
     padding: 1rem 6rem;
-    background-color: rgb(29, 155, 240);
+    background-color: var(--btn-color);
     margin-top: 1rem;
     cursor: pointer;
 }
 
 .tweet-btn:hover {
-    transition: 500ms ease-out;
-    background-color: rgb(26, 140, 216, 0.8);
+    transition: var(--transition);
+    background-color: var(--btn-hover-color);
 }
 
 @media only screen and (max-width:1300px){
