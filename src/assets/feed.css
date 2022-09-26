@@ -242,8 +242,84 @@ textarea {
 }
 
 .post-social li {
-    padding: 2px 4px;
+    padding: 4px 8px;
     font-size: 16px;
     color: gray;
     border-radius: 30px;
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+}
+
+.post-icons {
+    border-radius: 30px;
+    margin-right: 10px;
+    font-size: 16px;
+    display: flex;
+    align-items: center; 
+    cursor: pointer; 
+}
+
+.post-num {
+    margin-left: 10px;
+}
+
+.post-icons-comment:hover {
+    color: var(--btn-color);
+    transition: var(--transition);
+}
+
+.post-icons-retweet:hover {
+  color: rgb(37, 158, 37, 1);
+  transition: var(--transition);
+}
+
+.post-icons-upload:hover {
+  color: var(--btn-color);
+  transition: var(--transition);
+}
+
+.post-icons-heart:hover {
+    color: rgb(249, 24, 128);
+    transition: var(--transition)
+}
+
+.icons {
+    padding: 6px 6px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.comment:hover {
+    background-color: var(--btn-li-hover-color);
+    transition: var(--transition);
+}
+
+.upload:hover {
+ background-color: var(--btn-li-hover-color);
+ transition: var(--transition);
+}
+
+.heart:hover{
+    background-color: rgb(249, 24, 128, 0.2);
+    transition: var(--transition);
+}
+
+.retweet:hover {
+  background-color: rgb(37, 158, 37, 0.25);
+  transition: var(--transition);
+}
+
+
+.active-heart {
+    transform: scale(1.3);
+    fill: rgb(249, 24, 128);
+    color: rgb(249, 24, 128);
+    transition: var(--transition);
+}
+
+.active-heart-num {
+    color: rgb(249, 24, 128);
+    transition: var(--transition);
 }
