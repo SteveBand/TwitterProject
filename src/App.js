@@ -1,11 +1,12 @@
 import React from "react";
 import { HomePage } from "./flow/homepage";
-import "../src/assets/App.css";
-
+import { Context } from './contexts/context'
 function App() {
   return (
     <React.StrictMode>
-      <HomePage/>
+      <Context>  
+          <HomePage />
+      </Context>
     </React.StrictMode>
   );
 }

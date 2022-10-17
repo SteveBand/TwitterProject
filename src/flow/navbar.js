@@ -1,93 +1,95 @@
 import React from 'react';
-import '../assets/navbar.css';
+import { useDispatch } from 'react-redux';
+import { setShowModal } from '../redux/mainglobal';
 import { FaTwitter } from 'react-icons/fa';
 import { BiHomeCircle, BiHash, BiBell, BiBookmark, BiListUl, BiPen } from 'react-icons/bi';
 import { AiOutlineMail } from 'react-icons/ai';
 import { CgProfile, CgMoreO } from 'react-icons/cg';
+import { Nav, NavContent, TwitterIcon, Text, NavItems, NavTwitterIcon, TweetBtn } from '../assets/navbarStyled';
 
 
-export const MainPageNav = () => {
+export const MainPageNav = ({ }) => {
+    const dispatch = useDispatch();
 
     return (
         <React.StrictMode>
-                <section className='nav'>
-                    <article className='nav-content'>
-                        <div className='nav-items'>
-                            <div className='twitter-icon icon'>
-                                <FaTwitter />
-                            </div>
-                            <div className='text'>
-                            </div>
-                        </div>
-                        <div className='nav-items'>
+                <Nav>
+                    <NavContent >
+                        <NavTwitterIcon>
+                            <TwitterIcon>
+                                <FaTwitter/>
+                            </TwitterIcon>
+                            <Text />
+                        </NavTwitterIcon>
+                        <NavItems>
                             <div>
-                                 <BiHomeCircle className='icon'/>
+                                 <BiHomeCircle style={{margin:'5px', fontSize:'200%'}}/>
                             </div>
-                            <div className='text'>
+                            <Text>
                                Home
-                            </div>
-                        </div>
-                        <div className='nav-items'>
+                            </Text>
+                        </NavItems>
+                        <NavItems>
                             <div>
-                                <BiHash className='icon'/>
+                                <BiHash style={{margin:'5px', fontSize:'200%'}}/>
                             </div>
-                            <div className='text'>
+                            <Text>
                                  Explore
-                            </div>
-                        </div>
-                        <div className='nav-items'>
+                            </Text>
+                        </NavItems>
+                        <NavItems>
                             <div>
-                                <BiBell className='icon'/>
+                                <BiBell style={{margin:'5px', fontSize:'200%'}}/>
                             </div>
-                            <div className='text'>
+                            <Text>
                                Notifications
-                            </div>
-                        </div>
-                        <div className='nav-items'>
+                            </Text>
+                        </NavItems>
+                        <NavItems>
                             <div>
-                            <AiOutlineMail className='icon'/>
+                            <AiOutlineMail style={{margin:'5px', fontSize:'200%'}}/>
                             </div>
-                            <div className='text'>
+                            <Text>
                                 Messages
-                            </div>
-                        </div>
-                        <div className='nav-items'>
+                            </Text>
+                        </NavItems>
+                        <NavItems>
                             <div>
-                               <BiBookmark className='icon'/>
+                               <BiBookmark style={{margin:'5px', fontSize:'200%'}}/>
                             </div>
-                            <div className='text'>
+                            <Text>
                                 Bookmarks
-                            </div>
-                        </div>
-                        <div className='nav-items'>
+                            </Text>
+                        </NavItems>
+                        <NavItems>
                             <div>
-                                <BiListUl className='icon'/>
+                                <BiListUl style={{margin:'5px', fontSize:'200%'}}/>
                             </div>
-                            <div className='text'>
+                            <Text>
                                 Lists
-                            </div>
-                        </div>
-                        <div className='nav-items'>
+                            </Text>
+                        </NavItems>
+                        <NavItems>
                             <div>
-                                <CgProfile className='icon'/>
+                                <CgProfile style={{margin:'5px', fontSize:'200%'}}/>
                             </div>
-                            <div className='text'>
+                            <Text>
                                 Profile
-                            </div>
-                        </div>
-                        <div className='nav-items'>
+                            </Text>
+                        </NavItems>
+                        <NavItems>
                             <div>
-                                <CgMoreO className='icon'/>
+                                <CgMoreO style={{margin:'5px', fontSize:'200%'}}/>
                             </div>
-                            <div className='text'>
+                            <Text>
                                 More
-                            </div>
-                        </div>
-                            <div className='tweet-btn'>
+                            </Text>
+                        </NavItems>
+                            <TweetBtn onClick={() => dispatch(setShowModal(true))}>
                                 Tweet
-                            </div>                    
-                    </article>
-                </section>
+                            </TweetBtn>                    
+                    </NavContent>
+                </Nav>
         </React.StrictMode>
     )
 }

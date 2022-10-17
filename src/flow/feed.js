@@ -1,48 +1,63 @@
-import React, { useState, useEffect, useContext } from 'react';
-import { content } from '../contexts/context';
+import React, { useState, useEffect, useRef } from 'react';
+import {useSelector } from 'react-redux';
 import { Post } from '../components/post';
 import { InputFeed } from '../components/InputFeed';
-import '../assets/feed.css'
-import { WiSunrise } from 'react-icons/wi'
+import { WiSunrise } from 'react-icons/wi';
+import { Feed, PostInput, TopPostInput, Title, TopTweets, DropDownBtn } from '../assets/feedStyled';
+import { TopTweetsDD } from '../components/dropdowns/toptweetsDD';
+
 
 
 export const FeedPage = () => {
-    const { posts, setPosts, textAreaInput, setTextAreaInput } = useContext(content);
+    const textAreaInput = useSelector((state) => state.posts.textAreaInput);
+    const posts = useSelector((state) => state.posts.postsList);
+    const [showDropDown, setShowDropDown] = useState(false);
+    const topTweetBtn = useRef(); 
+    const openMenu = () => {
+       return setShowDropDown(true);
+    }
 
     useEffect(() => {
     }, [textAreaInput])
-    
+
     useEffect(() => {
-       setTextAreaInput('')
-       console.log(posts)
-    }, [posts])
+        const closeMenu = (e) => {
+           if (e.path[1].tagName !== 'BUTTON') {
+            setShowDropDown(false);
+        }
+           
+     }
+        document.body.addEventListener('click', closeMenu);
+
+        return () => document.body.removeEventListener('click', closeMenu);
+    }, []);
 
     return (
         <React.StrictMode>
-            <div className='feed'>
-                <section className='post-input'>
-                    <div className='top-post-input'>
-                    <div className='title'>
-                        <h5>Home</h5>
-                    </div>
-                    <div className='top-tweets'>
-                         <WiSunrise/>
-                        </div>
-                    </div>
-                    <InputFeed posts={posts} setPosts={setPosts} textAreaInput={textAreaInput} setTextAreaInput={setTextAreaInput}/>
+            <Feed >
+                <PostInput>
+                    <TopPostInput>
+                    <Title><h5>Home</h5></Title>
+                        <TopTweets ref={topTweetBtn}  onClick={openMenu}><DropDownBtn type='submit'><WiSunrise style={{color:'white'}} /></DropDownBtn>
+                            { showDropDown ? <TopTweetsDD /> :null }
+                        </TopTweets>
+                     </TopPostInput>
+                    <InputFeed posts={posts}>
+                        
+                    </InputFeed>
                     <div className='tweets-posts'>
                         {posts ? 
                             posts.map((item) => {
-                                const { content, username, logo, id, isLike, liked } = item;
+                                const { content, username, logo, id, } = item;
                                 return (
-                                    <Post id={id} username={username} logo={logo} content={content} isLike={isLike} liked={liked}/>
+                                    <Post id={id} username={username} logo={logo} content={content} />
                                 )
                             }) 
                             : <div></div>
                         }
                     </div>
-                 </section>
-            </div>
+                </PostInput>
+        </Feed>
       </React.StrictMode>
     );
 }
