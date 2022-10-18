@@ -1,9 +1,10 @@
 import React, { useEffect, } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setShowModal } from '../redux/mainglobal';
-import { MainPageNav } from './navbar';
+import { MainPageNav } from '../components/navbar';
 import { FeedPage } from './feed';
 import { TweetModal } from './tweetmodal';
+import { Trends } from '../components/trends';
 
 
 export const HomePage = () => {
@@ -22,6 +23,7 @@ export const HomePage = () => {
             <div className='main-page'>
                 <MainPageNav />
                 <FeedPage />
+                <Trends />
                 {showModal ?
                     <TweetModal />
                     : null
