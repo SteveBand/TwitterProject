@@ -19,7 +19,7 @@ export const TopPostInput = styled.div`
 `;
 
 export const Title = styled.div`
-    margin:15px 15px;
+    margin: 15px 15px;
     font-size: 25px;
     width: 520px;
 `;
@@ -41,6 +41,15 @@ export const TopTweets = styled.div`
         background-color: rgb(151, 149, 149, 0.2);
     }
 `;
+
+export const TweetsPosts = styled.div`
+    width: 100.4%;
+    margin-left: -1px;
+    border: 1px solid gray;
+    border-top: none;
+    border-bottom: none;
+    height: max-content;
+  `
 
 // TopTweetsDropDOWN CSS STARTS HERE //////
 export const TopTweetsDropDown = styled.section`

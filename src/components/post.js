@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import { PostDropDown } from "./dropdowns/postdropdown";
+import { PostDropDown } from "./homePage/dropdowns/postdropdown";
 import { MdMoreHoriz, MdOutlineQuickreply } from "react-icons/md";
 import { AiOutlineRetweet, AiFillHeart } from "react-icons/ai";
 import { BsUpload } from "react-icons/bs";

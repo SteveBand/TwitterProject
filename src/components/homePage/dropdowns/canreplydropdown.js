@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
-import { content } from '../../contexts/context';
-import { CanReplyDropDownSection, EveryoneCanReplyBtn, EveryoneCanReplyBtnSvg, PeopleMentionBtn, PeopleYouFollowBtn, PeopleYouFollowBtnSvg } from '../../assets/inputfeedStyled';
+import { content } from '../../../contexts/context';
+import { CanReplyDropDownSection, EveryoneCanReplyBtn, EveryoneCanReplyBtnSvg, PeopleMentionBtn, PeopleYouFollowBtn, PeopleYouFollowBtnSvg } from '../../../assets/inputfeedStyled';
 import { IoEarthSharp } from 'react-icons/io5';
 import { AiOutlineCheck } from 'react-icons/ai';
 import { RiUserFollowLine } from 'react-icons/ri';

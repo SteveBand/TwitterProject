@@ -1,4 +1,4 @@
-import { LatestBtn, PrefBtn, TopTweetsDropDown } from '../../assets/feedStyled';
+import { LatestBtn, PrefBtn, TopTweetsDropDown } from '../../../assets/feedStyled';
 import { BsStars } from 'react-icons/bs';
 import { BiCog } from 'react-icons/bi';
 import { TbArrowsRightLeft } from 'react-icons/tb';

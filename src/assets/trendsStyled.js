@@ -3,20 +3,25 @@ import styled from "styled-components";
 const backGroundColor = 'rgb(22, 24, 28)'
 
 export const TrendsBox = styled.section`
-height: 890px;
-width: 350px;
-margin-left: 35px;
-display: flex;
-justify-content: center;
-flex-direction: column;
+    height: 890px;
+    width: 350px;
+    margin-left: 35px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    @media only screen and (max-width: 1200px){
+        display: none;
+    }
 ` 
 export const TrendsContainer = styled.section`
     position: relative;
     background-color: ${backGroundColor};
     width: inherit;
     height: inherit;
-    margin-top: 20px;
+    top: 65px;
     border-radius: 20px;
+
 `
 
 
@@ -26,6 +31,18 @@ export const TrendsContainer = styled.section`
 
 
 //SEARCH BAR CSS ////
+
+export const SearchBarBackground = styled.section`
+    position: fixed;
+    top: 0px;
+    background-color: black;
+    border: none;
+    width: 100%;
+    height: 57px;
+    z-index: 49;
+    display: flex;
+    align-items: center;
+`
 
 export const SearchBarBox = styled.section`
     position: sticky;

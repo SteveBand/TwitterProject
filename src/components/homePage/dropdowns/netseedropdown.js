@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { EveryoneBtn, EveryoneBtnSvg, NetSeeDropDownSection, TwitterCircleBtn, TwitterCircleBtnSvg } from '../../assets/inputfeedStyled';
+import { EveryoneBtn, EveryoneBtnSvg, NetSeeDropDownSection, TwitterCircleBtn, TwitterCircleBtnSvg } from '../../../assets/inputfeedStyled';
 import { IoEarthSharp } from 'react-icons/io5';
 import { AiOutlineCheck } from 'react-icons/ai';
 import { RiUserHeartFill } from 'react-icons/ri';

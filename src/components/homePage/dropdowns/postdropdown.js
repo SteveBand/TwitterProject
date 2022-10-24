@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch} from 'react-redux';
-import { removePost } from '../../redux/mainglobal';
-import { BlockBtn, EmbedBtn, IntresBtn, ListBtn, MuteBtn, PostMoreDropDown, ReportBtn, UnfollowBtn } from '../../assets/postStyled';
+import { removePost } from '../../../redux/mainglobal';
+import { BlockBtn, EmbedBtn, IntresBtn, ListBtn, MuteBtn, PostMoreDropDown, ReportBtn, UnfollowBtn } from '../../../assets/postStyled';
 import {BsEmojiFrown, BsPersonX, BsCardList, BsMicMute, BsFlag} from 'react-icons/bs'
 import { BiBlock } from 'react-icons/bi';
 import { ImEmbed2 } from 'react-icons/im';

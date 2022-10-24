@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 
 export const Nav = styled.section`
+    position: sticky;
     width: 32vw;
     height: 70vh;
-    position: sticky;
     top: 0;
     display: flex;
     justify-content: right;
@@ -61,6 +61,38 @@ export const NavItems = styled.div`
     transition: var(--transition);
     background-color: var(--nav-hover-color);
     }
+
+    @media only screen and (max-height: 620px){
+        margin-bottom: 0rem;
+        height: 12vh;
+        width: 4vw;
+    }
+`
+
+export const NavItemsHidden = styled.div`
+    position: sticky;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 12vw;
+    height: 7vh;
+    border-radius: 2.5rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+
+    &:hover{
+    transition: var(--transition);
+    background-color: var(--nav-hover-color);
+    }
+
+    @media only screen and (max-height: 560px){
+        display: none;
+    }
+`
+
+export const NavItemsIcons = styled.svg`
+    margin: 5px;
+    font-size: 200%;
 `
 
 export const NavTwitterIcon = styled.div`
@@ -72,7 +104,12 @@ export const NavTwitterIcon = styled.div`
     height: 7vh;
     border-radius: 2.5rem;
     margin-bottom: 1rem;
-    cursor: pointer;    
+    cursor: pointer;
+    
+    @media only screen and (max-height: 560px){
+        margin-bottom: 0.4rem;
+        
+    }
 `
 
 export const TweetBtn = styled.div`
@@ -93,4 +130,10 @@ export const TweetBtn = styled.div`
         padding: 0.7rem 1.5rem;
         left: 3rem;   
     }
+
+    @media only screen and (max-height: 560px){ 
+        margin-top: 0.4rem;
+        padding: 0.5rem 1.2rem;
+    }
 `
+

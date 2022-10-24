@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { nanoid } from "@reduxjs/toolkit";
 import { useDispatch, useSelector } from "react-redux";
-import { addPost } from "../redux/mainglobal";
+import { addPost } from "../../redux/mainglobal";
 import {
   NetSee,
   Profile,
@@ -13,7 +13,7 @@ import {
   TweetBtnFeedContainer,
   TweetBtnFeed,
   Hidden,
-} from "../assets/inputfeedStyled";
+} from "../../assets/inputfeedStyled";
 import { NetSeeDropdown } from "./dropdowns/netseedropdown";
 import { CanReplyDropdown } from "./dropdowns/canreplydropdown";
 import { MdAccountCircle, MdOutlinePlace } from "react-icons/md";
@@ -40,6 +40,14 @@ export const InputFeed = ({ setShowModal }) => {
       content: textAreaInput,
       username: "username",
       logo: <MdAccountCircle />,
+      comments: [{
+        id: nanoid(),
+        user: 'username',
+        logo: <MdAccountCircle />,
+        content: '',
+        likes: 0,
+        replies: 0,
+      }]
     };
     await dispatch(addPost(newPost))((textField.current.value = ""));
     setShowModal(false);

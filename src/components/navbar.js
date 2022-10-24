@@ -5,7 +5,7 @@ import { FaTwitter } from 'react-icons/fa';
 import { BiHomeCircle, BiHash, BiBell, BiBookmark, BiListUl, BiPen } from 'react-icons/bi';
 import { AiOutlineMail } from 'react-icons/ai';
 import { CgProfile, CgMoreO } from 'react-icons/cg';
-import { Nav, NavContent, TwitterIcon, Text, NavItems, NavTwitterIcon, TweetBtn } from '../assets/navbarStyled';
+import { Nav, NavContent, TwitterIcon, Text, NavItems, NavTwitterIcon, TweetBtn, NavItemsHidden, NavItemsIcons } from '../assets/navbarStyled';
 
 
 export const MainPageNav = ({ }) => {
@@ -13,8 +13,8 @@ export const MainPageNav = ({ }) => {
 
     return (
         <React.StrictMode>
-                <Nav>
-                    <NavContent >
+            <Nav>
+                <NavContent >
                         <NavTwitterIcon>
                             <TwitterIcon>
                                 <FaTwitter/>
@@ -53,22 +53,22 @@ export const MainPageNav = ({ }) => {
                                 Messages
                             </Text>
                         </NavItems>
-                        <NavItems>
+                        <NavItemsHidden>
                             <div>
                                <BiBookmark style={{margin:'5px', fontSize:'200%'}}/>
                             </div>
                             <Text>
                                 Bookmarks
                             </Text>
-                        </NavItems>
-                        <NavItems>
+                        </NavItemsHidden>
+                        <NavItemsHidden>
                             <div>
                                 <BiListUl style={{margin:'5px', fontSize:'200%'}}/>
                             </div>
                             <Text>
                                 Lists
                             </Text>
-                        </NavItems>
+                        </NavItemsHidden>
                         <NavItems>
                             <div>
                                 <CgProfile style={{margin:'5px', fontSize:'200%'}}/>
